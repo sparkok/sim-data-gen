@@ -8,7 +8,6 @@ require (
 	github.com/gogo/protobuf v1.3.2
 	github.com/google/btree v1.1.3
 	github.com/google/uuid v1.3.0
-	github.com/jinzhu/copier v0.3.5
 	github.com/lib/pq v1.10.9
 	github.com/nats-io/nats.go v1.37.0
 	github.com/patrickmn/go-cache v2.1.0+incompatible
@@ -29,7 +28,6 @@ require (
 	github.com/dgryski/go-rendezvous v0.0.0-20200823014737-9f7001d12a5f // indirect
 	github.com/klauspost/compress v1.17.2 // indirect
 	github.com/mohae/deepcopy v0.0.0-20170929034955-c48cc78d4826 // indirect
-	github.com/mpraski/clusters v0.0.0-20171016094157-18104487c312 // indirect
 	github.com/nats-io/nkeys v0.4.7 // indirect
 	github.com/nats-io/nuid v1.0.1 // indirect
 	github.com/richardlehane/mscfb v1.0.4 // indirect
