@@ -1,0 +1,227 @@
+#### 创建对象
+POST http://127.0.0.1:8888/digger_assistant/yanalyser/createObj
+Accept: application/json, text/plain, */*
+Accept-Language: zh-CN,zh;q=0.9
+Content-Type: application/json
+ 
+{
+"analyserNum":"somestring"
+,"createdAt":"somestring"
+,"crushingPlant":"somestring"
+,"flux":0
+,"load":0
+,"mat1":0
+,"mat10":0
+,"mat11":0
+,"mat12":0
+,"mat13":0
+,"mat14":0
+,"mat15":0
+,"mat16":0
+,"mat17":0
+,"mat18":0
+,"mat19":0
+,"mat2":0
+,"mat20":0
+,"mat3":0
+,"mat4":0
+,"mat5":0
+,"mat6":0
+,"mat7":0
+,"mat8":0
+,"mat9":0
+,"speed":0
+,"status":0
+,"testAt":0
+,"token":"somestring"
+}
+ 
+#### 更新对象
+POST http://127.0.0.1:8888/digger_assistant/yanalyser/updateObj
+Accept: application/json, text/plain, */*
+Accept-Language: zh-CN,zh;q=0.9
+Content-Type: application/json
+ 
+{
+"analyserNum":"somestring"
+,"createdAt":"somestring"
+,"crushingPlant":"somestring"
+,"flux":0
+,"load":0
+,"mat1":0
+,"mat10":0
+,"mat11":0
+,"mat12":0
+,"mat13":0
+,"mat14":0
+,"mat15":0
+,"mat16":0
+,"mat17":0
+,"mat18":0
+,"mat19":0
+,"mat2":0
+,"mat20":0
+,"mat3":0
+,"mat4":0
+,"mat5":0
+,"mat6":0
+,"mat7":0
+,"mat8":0
+,"mat9":0
+,"speed":0
+,"status":0
+,"testAt":0
+,"token":"somestring"
+}
+
+#### 获取对象
+POST http://127.0.0.1:8888/digger_assistant/yanalyser/getObjById
+Accept: application/json, text/plain, */*
+Accept-Language: zh-CN,zh;q=0.9
+Content-Type: application/json
+ 
+{
+	"id":"somestring"
+}
+
+#### 对象列表
+POST http://127.0.0.1:8888/digger_assistant/yanalyser/listObj
+Accept: application/json, text/plain, */*
+Accept-Language: zh-CN,zh;q=0.9
+Content-Type: application/json
+
+#### 对象翻页
+POST http://127.0.0.1:8888/digger_assistant/yanalyser/pageObj
+Accept: application/json, text/plain, */*
+Accept-Language: zh-CN,zh;q=0.9
+Content-Type: application/json
+ 
+{
+ 
+ "analyserNum":"somestring"
+,"createdAt":"somestring"
+,"crushingPlant":"somestring"
+,"flux":0
+,"load":0
+,"mat1":0
+,"mat10":0
+,"mat11":0
+,"mat12":0
+,"mat13":0
+,"mat14":0
+,"mat15":0
+,"mat16":0
+,"mat17":0
+,"mat18":0
+,"mat19":0
+,"mat2":0
+,"mat20":0
+,"mat3":0
+,"mat4":0
+,"mat5":0
+,"mat6":0
+,"mat7":0
+,"mat8":0
+,"mat9":0
+,"speed":0
+,"status":0
+,"testAt":0
+,"token":"somestring"
+}
+
+#### 对象总数
+POST http://127.0.0.1:8888/digger_assistant/yanalyser/count4Page
+Accept: application/json, text/plain, */*
+Accept-Language: zh-CN,zh;q=0.9
+Content-Type: application/json
+ 
+{
+ 
+ "analyserNum":"somestring"
+,"createdAt":"somestring"
+,"crushingPlant":"somestring"
+,"flux":0
+,"load":0
+,"mat1":0
+,"mat10":0
+,"mat11":0
+,"mat12":0
+,"mat13":0
+,"mat14":0
+,"mat15":0
+,"mat16":0
+,"mat17":0
+,"mat18":0
+,"mat19":0
+,"mat2":0
+,"mat20":0
+,"mat3":0
+,"mat4":0
+,"mat5":0
+,"mat6":0
+,"mat7":0
+,"mat8":0
+,"mat9":0
+,"speed":0
+,"status":0
+,"testAt":0
+,"token":"somestring"
+}
+
+#### 删除对象
+POST http://127.0.0.1:8888/digger_assistant/yanalyser/deleteObj
+Accept: application/json, text/plain, */*
+Accept-Language: zh-CN,zh;q=0.9
+Content-Type: application/json
+ 
+{
+ "id":"somestring"
+}
+ 
+#### 删除对象列表
+POST http://127.0.0.1:8888/digger_assistant/yanalyser/deleteObjs
+Accept: application/json, text/plain, */*
+Accept-Language: zh-CN,zh;q=0.9
+Content-Type: application/json
+ 
+{
+ "ids":["somestring"]
+}
+
+#### 创建对象
+POST http://127.0.0.1:8888/digger_assistant/yanalyser/createObj
+Accept: application/json, text/plain, */*
+Accept-Language: zh-CN,zh;q=0.9
+Content-Type: application/json
+ 
+{
+"analyserNum":"somestring"
+,"createdAt":"somestring"
+,"crushingPlant":"somestring"
+,"flux":0
+,"load":0
+,"mat1":0
+,"mat10":0
+,"mat11":0
+,"mat12":0
+,"mat13":0
+,"mat14":0
+,"mat15":0
+,"mat16":0
+,"mat17":0
+,"mat18":0
+,"mat19":0
+,"mat2":0
+,"mat20":0
+,"mat3":0
+,"mat4":0
+,"mat5":0
+,"mat6":0
+,"mat7":0
+,"mat8":0
+,"mat9":0
+,"speed":0
+,"status":0
+,"testAt":0
+,"token":"somestring"
+}

@@ -1,0 +1,137 @@
+#### 创建对象
+POST http://127.0.0.1:8888/digger_assistant/setofboomgroups/createObj
+Accept: application/json, text/plain, */*
+Accept-Language: zh-CN,zh;q=0.9
+Content-Type: application/json
+ 
+{
+"boomGroupIds":"somestring"
+,"createdAt":"somestring"
+,"dateFlag":"somestring"
+,"diggers":"somestring"
+,"matContents":"somestring"
+,"tokenOfMineProduct":"somestring"
+,"name":"somestring"
+,"nt":"somestring"
+,"status":0
+,"token":"somestring"
+,"updateAt":"somestring"
+}
+ 
+#### 更新对象
+POST http://127.0.0.1:8888/digger_assistant/setofboomgroups/updateObj
+Accept: application/json, text/plain, */*
+Accept-Language: zh-CN,zh;q=0.9
+Content-Type: application/json
+ 
+{
+"boomGroupIds":"somestring"
+,"createdAt":"somestring"
+,"dateFlag":"somestring"
+,"diggers":"somestring"
+,"matContents":"somestring"
+,"tokenOfMineProduct":"somestring"
+,"name":"somestring"
+,"nt":"somestring"
+,"status":0
+,"token":"somestring"
+,"updateAt":"somestring"
+}
+
+#### 获取对象
+POST http://127.0.0.1:8888/digger_assistant/setofboomgroups/getObjById
+Accept: application/json, text/plain, */*
+Accept-Language: zh-CN,zh;q=0.9
+Content-Type: application/json
+ 
+{
+	"id":"somestring"
+}
+
+#### 对象列表
+POST http://127.0.0.1:8888/digger_assistant/setofboomgroups/listObj
+Accept: application/json, text/plain, */*
+Accept-Language: zh-CN,zh;q=0.9
+Content-Type: application/json
+
+#### 对象翻页
+POST http://127.0.0.1:8888/digger_assistant/setofboomgroups/pageObj
+Accept: application/json, text/plain, */*
+Accept-Language: zh-CN,zh;q=0.9
+Content-Type: application/json
+ 
+{
+ 
+ "boomGroupIds":"somestring"
+,"createdAt":"somestring"
+,"dateFlag":"somestring"
+,"diggers":"somestring"
+,"matContents":"somestring"
+,"tokenOfMineProduct":"somestring"
+,"name":"somestring"
+,"nt":"somestring"
+,"status":0
+,"token":"somestring"
+,"updateAt":"somestring"
+}
+
+#### 对象总数
+POST http://127.0.0.1:8888/digger_assistant/setofboomgroups/count4Page
+Accept: application/json, text/plain, */*
+Accept-Language: zh-CN,zh;q=0.9
+Content-Type: application/json
+ 
+{
+ 
+ "boomGroupIds":"somestring"
+,"createdAt":"somestring"
+,"dateFlag":"somestring"
+,"diggers":"somestring"
+,"matContents":"somestring"
+,"tokenOfMineProduct":"somestring"
+,"name":"somestring"
+,"nt":"somestring"
+,"status":0
+,"token":"somestring"
+,"updateAt":"somestring"
+}
+
+#### 删除对象
+POST http://127.0.0.1:8888/digger_assistant/setofboomgroups/deleteObj
+Accept: application/json, text/plain, */*
+Accept-Language: zh-CN,zh;q=0.9
+Content-Type: application/json
+ 
+{
+ "id":"somestring"
+}
+ 
+#### 删除对象列表
+POST http://127.0.0.1:8888/digger_assistant/setofboomgroups/deleteObjs
+Accept: application/json, text/plain, */*
+Accept-Language: zh-CN,zh;q=0.9
+Content-Type: application/json
+ 
+{
+ "ids":["somestring"]
+}
+
+#### 创建对象
+POST http://127.0.0.1:8888/digger_assistant/setofboomgroups/createObj
+Accept: application/json, text/plain, */*
+Accept-Language: zh-CN,zh;q=0.9
+Content-Type: application/json
+ 
+{
+"boomGroupIds":"somestring"
+,"createdAt":"somestring"
+,"dateFlag":"somestring"
+,"diggers":"somestring"
+,"matContents":"somestring"
+,"tokenOfMineProduct":"somestring"
+,"name":"somestring"
+,"nt":"somestring"
+,"status":0
+,"token":"somestring"
+,"updateAt":"somestring"
+}

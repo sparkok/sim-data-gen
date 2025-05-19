@@ -1,0 +1,252 @@
+#### 创建对象
+POST http://127.0.0.1:8888/digger_assistant/boomgroup/createObj
+Accept: application/json, text/plain, */*
+Accept-Language: zh-CN,zh;q=0.9
+Content-Type: application/json
+ 
+{
+"distance":0
+,"geom":"somestring"
+,"high":0
+,"low":0
+,"material1":0
+,"material10":0
+,"material11":0
+,"material12":0
+,"material13":0
+,"material14":0
+,"material15":0
+,"material16":0
+,"material17":0
+,"material18":0
+,"material19":0
+,"material2":0
+,"material20":0
+,"material3":0
+,"material4":0
+,"material5":0
+,"material6":0
+,"material7":0
+,"material8":0
+,"material9":0
+,"name":"somestring"
+,"nt":"somestring"
+,"number":"somestring"
+,"tokenOfPile":"somestring"
+,"status":"somestring"
+,"tag":"somestring"
+,"token":"somestring"
+,"used":0
+,"x":0
+,"y":0
+}
+ 
+#### 更新对象
+POST http://127.0.0.1:8888/digger_assistant/boomgroup/updateObj
+Accept: application/json, text/plain, */*
+Accept-Language: zh-CN,zh;q=0.9
+Content-Type: application/json
+ 
+{
+"distance":0
+,"geom":"somestring"
+,"high":0
+,"low":0
+,"material1":0
+,"material10":0
+,"material11":0
+,"material12":0
+,"material13":0
+,"material14":0
+,"material15":0
+,"material16":0
+,"material17":0
+,"material18":0
+,"material19":0
+,"material2":0
+,"material20":0
+,"material3":0
+,"material4":0
+,"material5":0
+,"material6":0
+,"material7":0
+,"material8":0
+,"material9":0
+,"name":"somestring"
+,"nt":"somestring"
+,"number":"somestring"
+,"tokenOfPile":"somestring"
+,"status":"somestring"
+,"tag":"somestring"
+,"token":"somestring"
+,"used":0
+,"x":0
+,"y":0
+}
+
+#### 获取对象
+POST http://127.0.0.1:8888/digger_assistant/boomgroup/getObjById
+Accept: application/json, text/plain, */*
+Accept-Language: zh-CN,zh;q=0.9
+Content-Type: application/json
+ 
+{
+	"id":"somestring"
+}
+
+#### 对象列表
+POST http://127.0.0.1:8888/digger_assistant/boomgroup/listObj
+Accept: application/json, text/plain, */*
+Accept-Language: zh-CN,zh;q=0.9
+Content-Type: application/json
+
+#### 对象翻页
+POST http://127.0.0.1:8888/digger_assistant/boomgroup/pageObj
+Accept: application/json, text/plain, */*
+Accept-Language: zh-CN,zh;q=0.9
+Content-Type: application/json
+ 
+{
+ 
+ "distance":0
+,"geom":"somestring"
+,"high":0
+,"low":0
+,"material1":0
+,"material10":0
+,"material11":0
+,"material12":0
+,"material13":0
+,"material14":0
+,"material15":0
+,"material16":0
+,"material17":0
+,"material18":0
+,"material19":0
+,"material2":0
+,"material20":0
+,"material3":0
+,"material4":0
+,"material5":0
+,"material6":0
+,"material7":0
+,"material8":0
+,"material9":0
+,"name":"somestring"
+,"nt":"somestring"
+,"number":"somestring"
+,"tokenOfPile":"somestring"
+,"status":"somestring"
+,"tag":"somestring"
+,"token":"somestring"
+,"used":0
+,"x":0
+,"y":0
+}
+
+#### 对象总数
+POST http://127.0.0.1:8888/digger_assistant/boomgroup/count4Page
+Accept: application/json, text/plain, */*
+Accept-Language: zh-CN,zh;q=0.9
+Content-Type: application/json
+ 
+{
+ 
+ "distance":0
+,"geom":"somestring"
+,"high":0
+,"low":0
+,"material1":0
+,"material10":0
+,"material11":0
+,"material12":0
+,"material13":0
+,"material14":0
+,"material15":0
+,"material16":0
+,"material17":0
+,"material18":0
+,"material19":0
+,"material2":0
+,"material20":0
+,"material3":0
+,"material4":0
+,"material5":0
+,"material6":0
+,"material7":0
+,"material8":0
+,"material9":0
+,"name":"somestring"
+,"nt":"somestring"
+,"number":"somestring"
+,"tokenOfPile":"somestring"
+,"status":"somestring"
+,"tag":"somestring"
+,"token":"somestring"
+,"used":0
+,"x":0
+,"y":0
+}
+
+#### 删除对象
+POST http://127.0.0.1:8888/digger_assistant/boomgroup/deleteObj
+Accept: application/json, text/plain, */*
+Accept-Language: zh-CN,zh;q=0.9
+Content-Type: application/json
+ 
+{
+ "id":"somestring"
+}
+ 
+#### 删除对象列表
+POST http://127.0.0.1:8888/digger_assistant/boomgroup/deleteObjs
+Accept: application/json, text/plain, */*
+Accept-Language: zh-CN,zh;q=0.9
+Content-Type: application/json
+ 
+{
+ "ids":["somestring"]
+}
+
+#### 创建对象
+POST http://127.0.0.1:8888/digger_assistant/boomgroup/createObj
+Accept: application/json, text/plain, */*
+Accept-Language: zh-CN,zh;q=0.9
+Content-Type: application/json
+ 
+{
+"distance":0
+,"geom":"somestring"
+,"high":0
+,"low":0
+,"material1":0
+,"material10":0
+,"material11":0
+,"material12":0
+,"material13":0
+,"material14":0
+,"material15":0
+,"material16":0
+,"material17":0
+,"material18":0
+,"material19":0
+,"material2":0
+,"material20":0
+,"material3":0
+,"material4":0
+,"material5":0
+,"material6":0
+,"material7":0
+,"material8":0
+,"material9":0
+,"name":"somestring"
+,"nt":"somestring"
+,"number":"somestring"
+,"tokenOfPile":"somestring"
+,"status":"somestring"
+,"tag":"somestring"
+,"token":"somestring"
+,"used":0
+,"x":0
+,"y":0
+}

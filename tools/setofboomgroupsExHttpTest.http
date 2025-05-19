@@ -1,0 +1,32 @@
+#### 用excel进行数据测试
+POST http://127.0.0.1:8888/digger_assistant/setofboomgroups/recalculate
+Accept: application/json, text/plain, */*
+Accept-Language: zh-CN,zh;q=0.9
+Content-Type: application/json
+ 
+{
+	"date":"2024-11-10",
+	"reloadData":false
+}
+
+
+#### 进行一次品位计算
+POST http://127.0.0.1:8888/digger_assistant/setofboomgroups/testCalculateState
+Accept: application/json, text/plain, */*
+Accept-Language: zh-CN,zh;q=0.9
+Content-Type: application/json
+
+{
+  "supposedNow":"2025-04-15 16:14:00",
+  "productName":"CP1"
+}
+
+#### 用现在时间进行一次品位计算
+POST http://127.0.0.1:8888/digger_assistant/setofboomgroups/testCalculateState
+Accept: application/json, text/plain, */*
+Accept-Language: zh-CN,zh;q=0.9
+Content-Type: application/json
+
+{
+  "productName":"CP1"
+}

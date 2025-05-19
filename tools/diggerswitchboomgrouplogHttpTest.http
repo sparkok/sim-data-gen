@@ -1,0 +1,122 @@
+#### 创建对象
+POST http://127.0.0.1:8888/digger_assistant/diggerswitchboomgrouplog/createObj
+Accept: application/json, text/plain, */*
+Accept-Language: zh-CN,zh;q=0.9
+Content-Type: application/json
+ 
+{
+"applyUtc":0
+,"boomGroupId":"somestring"
+,"dateFlag":"somestring"
+,"diggerId":"somestring"
+,"name":"somestring"
+,"status":0
+,"submitUtc":0
+,"token":"somestring"
+}
+ 
+#### 更新对象
+POST http://127.0.0.1:8888/digger_assistant/diggerswitchboomgrouplog/updateObj
+Accept: application/json, text/plain, */*
+Accept-Language: zh-CN,zh;q=0.9
+Content-Type: application/json
+ 
+{
+"applyUtc":0
+,"boomGroupId":"somestring"
+,"dateFlag":"somestring"
+,"diggerId":"somestring"
+,"name":"somestring"
+,"status":0
+,"submitUtc":0
+,"token":"somestring"
+}
+
+#### 获取对象
+POST http://127.0.0.1:8888/digger_assistant/diggerswitchboomgrouplog/getObjById
+Accept: application/json, text/plain, */*
+Accept-Language: zh-CN,zh;q=0.9
+Content-Type: application/json
+ 
+{
+	"id":"somestring"
+}
+
+#### 对象列表
+POST http://127.0.0.1:8888/digger_assistant/diggerswitchboomgrouplog/listObj
+Accept: application/json, text/plain, */*
+Accept-Language: zh-CN,zh;q=0.9
+Content-Type: application/json
+
+#### 对象翻页
+POST http://127.0.0.1:8888/digger_assistant/diggerswitchboomgrouplog/pageObj
+Accept: application/json, text/plain, */*
+Accept-Language: zh-CN,zh;q=0.9
+Content-Type: application/json
+ 
+{
+ 
+ "applyUtc":0
+,"boomGroupId":"somestring"
+,"dateFlag":"somestring"
+,"diggerId":"somestring"
+,"name":"somestring"
+,"status":0
+,"submitUtc":0
+,"token":"somestring"
+}
+
+#### 对象总数
+POST http://127.0.0.1:8888/digger_assistant/diggerswitchboomgrouplog/count4Page
+Accept: application/json, text/plain, */*
+Accept-Language: zh-CN,zh;q=0.9
+Content-Type: application/json
+ 
+{
+ 
+ "applyUtc":0
+,"boomGroupId":"somestring"
+,"dateFlag":"somestring"
+,"diggerId":"somestring"
+,"name":"somestring"
+,"status":0
+,"submitUtc":0
+,"token":"somestring"
+}
+
+#### 删除对象
+POST http://127.0.0.1:8888/digger_assistant/diggerswitchboomgrouplog/deleteObj
+Accept: application/json, text/plain, */*
+Accept-Language: zh-CN,zh;q=0.9
+Content-Type: application/json
+ 
+{
+ "id":"somestring"
+}
+ 
+#### 删除对象列表
+POST http://127.0.0.1:8888/digger_assistant/diggerswitchboomgrouplog/deleteObjs
+Accept: application/json, text/plain, */*
+Accept-Language: zh-CN,zh;q=0.9
+Content-Type: application/json
+ 
+{
+ "ids":["somestring"]
+}
+
+#### 创建对象
+POST http://127.0.0.1:8888/digger_assistant/diggerswitchboomgrouplog/createObj
+Accept: application/json, text/plain, */*
+Accept-Language: zh-CN,zh;q=0.9
+Content-Type: application/json
+ 
+{
+"applyUtc":0
+,"boomGroupId":"somestring"
+,"dateFlag":"somestring"
+,"diggerId":"somestring"
+,"name":"somestring"
+,"status":0
+,"submitUtc":0
+,"token":"somestring"
+}

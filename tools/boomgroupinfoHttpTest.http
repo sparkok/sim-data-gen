@@ -1,0 +1,302 @@
+#### 创建对象
+POST http://127.0.0.1:8888/digger_assistant/boomgroupinfo/createObj
+Accept: application/json, text/plain, */*
+Accept-Language: zh-CN,zh;q=0.9
+Content-Type: application/json
+ 
+{
+"tokenOfBoomGroup":"somestring"
+,"createdAt":"somestring"
+,"material1":0
+,"material10":0
+,"material11":0
+,"material12":0
+,"material13":0
+,"material14":0
+,"material15":0
+,"material16":0
+,"material17":0
+,"material18":0
+,"material19":0
+,"material2":0
+,"material20":0
+,"material3":0
+,"material4":0
+,"material5":0
+,"material6":0
+,"material7":0
+,"material8":0
+,"material9":0
+,"name":"somestring"
+,"probability1":0
+,"probability10":0
+,"probability11":0
+,"probability12":0
+,"probability13":0
+,"probability14":0
+,"probability15":0
+,"probability16":0
+,"probability17":0
+,"probability18":0
+,"probability19":0
+,"probability2":0
+,"probability20":0
+,"probability3":0
+,"probability4":0
+,"probability5":0
+,"probability6":0
+,"probability7":0
+,"probability8":0
+,"probability9":0
+,"token":"somestring"
+}
+ 
+#### 更新对象
+POST http://127.0.0.1:8888/digger_assistant/boomgroupinfo/updateObj
+Accept: application/json, text/plain, */*
+Accept-Language: zh-CN,zh;q=0.9
+Content-Type: application/json
+ 
+{
+"tokenOfBoomGroup":"somestring"
+,"createdAt":"somestring"
+,"material1":0
+,"material10":0
+,"material11":0
+,"material12":0
+,"material13":0
+,"material14":0
+,"material15":0
+,"material16":0
+,"material17":0
+,"material18":0
+,"material19":0
+,"material2":0
+,"material20":0
+,"material3":0
+,"material4":0
+,"material5":0
+,"material6":0
+,"material7":0
+,"material8":0
+,"material9":0
+,"name":"somestring"
+,"probability1":0
+,"probability10":0
+,"probability11":0
+,"probability12":0
+,"probability13":0
+,"probability14":0
+,"probability15":0
+,"probability16":0
+,"probability17":0
+,"probability18":0
+,"probability19":0
+,"probability2":0
+,"probability20":0
+,"probability3":0
+,"probability4":0
+,"probability5":0
+,"probability6":0
+,"probability7":0
+,"probability8":0
+,"probability9":0
+,"token":"somestring"
+}
+
+#### 获取对象
+POST http://127.0.0.1:8888/digger_assistant/boomgroupinfo/getObjById
+Accept: application/json, text/plain, */*
+Accept-Language: zh-CN,zh;q=0.9
+Content-Type: application/json
+ 
+{
+	"id":"somestring"
+}
+
+#### 对象列表
+POST http://127.0.0.1:8888/digger_assistant/boomgroupinfo/listObj
+Accept: application/json, text/plain, */*
+Accept-Language: zh-CN,zh;q=0.9
+Content-Type: application/json
+
+#### 对象翻页
+POST http://127.0.0.1:8888/digger_assistant/boomgroupinfo/pageObj
+Accept: application/json, text/plain, */*
+Accept-Language: zh-CN,zh;q=0.9
+Content-Type: application/json
+ 
+{
+ 
+ "tokenOfBoomGroup":"somestring"
+,"createdAt":"somestring"
+,"material1":0
+,"material10":0
+,"material11":0
+,"material12":0
+,"material13":0
+,"material14":0
+,"material15":0
+,"material16":0
+,"material17":0
+,"material18":0
+,"material19":0
+,"material2":0
+,"material20":0
+,"material3":0
+,"material4":0
+,"material5":0
+,"material6":0
+,"material7":0
+,"material8":0
+,"material9":0
+,"name":"somestring"
+,"probability1":0
+,"probability10":0
+,"probability11":0
+,"probability12":0
+,"probability13":0
+,"probability14":0
+,"probability15":0
+,"probability16":0
+,"probability17":0
+,"probability18":0
+,"probability19":0
+,"probability2":0
+,"probability20":0
+,"probability3":0
+,"probability4":0
+,"probability5":0
+,"probability6":0
+,"probability7":0
+,"probability8":0
+,"probability9":0
+,"token":"somestring"
+}
+
+#### 对象总数
+POST http://127.0.0.1:8888/digger_assistant/boomgroupinfo/count4Page
+Accept: application/json, text/plain, */*
+Accept-Language: zh-CN,zh;q=0.9
+Content-Type: application/json
+ 
+{
+ 
+ "tokenOfBoomGroup":"somestring"
+,"createdAt":"somestring"
+,"material1":0
+,"material10":0
+,"material11":0
+,"material12":0
+,"material13":0
+,"material14":0
+,"material15":0
+,"material16":0
+,"material17":0
+,"material18":0
+,"material19":0
+,"material2":0
+,"material20":0
+,"material3":0
+,"material4":0
+,"material5":0
+,"material6":0
+,"material7":0
+,"material8":0
+,"material9":0
+,"name":"somestring"
+,"probability1":0
+,"probability10":0
+,"probability11":0
+,"probability12":0
+,"probability13":0
+,"probability14":0
+,"probability15":0
+,"probability16":0
+,"probability17":0
+,"probability18":0
+,"probability19":0
+,"probability2":0
+,"probability20":0
+,"probability3":0
+,"probability4":0
+,"probability5":0
+,"probability6":0
+,"probability7":0
+,"probability8":0
+,"probability9":0
+,"token":"somestring"
+}
+
+#### 删除对象
+POST http://127.0.0.1:8888/digger_assistant/boomgroupinfo/deleteObj
+Accept: application/json, text/plain, */*
+Accept-Language: zh-CN,zh;q=0.9
+Content-Type: application/json
+ 
+{
+ "id":"somestring"
+}
+ 
+#### 删除对象列表
+POST http://127.0.0.1:8888/digger_assistant/boomgroupinfo/deleteObjs
+Accept: application/json, text/plain, */*
+Accept-Language: zh-CN,zh;q=0.9
+Content-Type: application/json
+ 
+{
+ "ids":["somestring"]
+}
+
+#### 创建对象
+POST http://127.0.0.1:8888/digger_assistant/boomgroupinfo/createObj
+Accept: application/json, text/plain, */*
+Accept-Language: zh-CN,zh;q=0.9
+Content-Type: application/json
+ 
+{
+"tokenOfBoomGroup":"somestring"
+,"createdAt":"somestring"
+,"material1":0
+,"material10":0
+,"material11":0
+,"material12":0
+,"material13":0
+,"material14":0
+,"material15":0
+,"material16":0
+,"material17":0
+,"material18":0
+,"material19":0
+,"material2":0
+,"material20":0
+,"material3":0
+,"material4":0
+,"material5":0
+,"material6":0
+,"material7":0
+,"material8":0
+,"material9":0
+,"name":"somestring"
+,"probability1":0
+,"probability10":0
+,"probability11":0
+,"probability12":0
+,"probability13":0
+,"probability14":0
+,"probability15":0
+,"probability16":0
+,"probability17":0
+,"probability18":0
+,"probability19":0
+,"probability2":0
+,"probability20":0
+,"probability3":0
+,"probability4":0
+,"probability5":0
+,"probability6":0
+,"probability7":0
+,"probability8":0
+,"probability9":0
+,"token":"somestring"
+}

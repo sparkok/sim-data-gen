@@ -1,0 +1,283 @@
+
+drop table if exists boom_group;
+create table boom_group
+(
+		distance FLOAT8  NOT NULL ,
+		geom VARCHAR(255) ,
+		high FLOAT8  NOT NULL ,
+		low FLOAT8  NOT NULL ,
+		material1 FLOAT8 ,
+		material10 FLOAT8 ,
+		material11 FLOAT8 ,
+		material12 FLOAT8 ,
+		material13 FLOAT8 ,
+		material14 FLOAT8 ,
+		material15 FLOAT8 ,
+		material16 FLOAT8 ,
+		material17 FLOAT8 ,
+		material18 FLOAT8 ,
+		material19 FLOAT8 ,
+		material2 FLOAT8 ,
+		material20 FLOAT8 ,
+		material3 FLOAT8 ,
+		material4 FLOAT8 ,
+		material5 FLOAT8 ,
+		material6 FLOAT8 ,
+		material7 FLOAT8 ,
+		material8 FLOAT8 ,
+		material9 FLOAT8 ,
+		name VARCHAR(255)  NOT NULL  UNIQUE ,
+		nt VARCHAR(255) ,
+		number VARCHAR(255)  NOT NULL  UNIQUE ,
+		pile_id VARCHAR(255) ,
+		status VARCHAR(255) ,
+		tag VARCHAR(255) ,
+		token VARCHAR(64) ,
+		used FLOAT8 ,
+		x FLOAT8  NOT NULL ,
+		y FLOAT8  NOT NULL 
+		,PRIMARY KEY(token)
+);
+
+drop table if exists boom_group_info;
+create table boom_group_info
+(
+		boom_group_id VARCHAR(255) ,
+		created_at TIMESTAMP ,
+		material1 FLOAT8 ,
+		material10 FLOAT8 ,
+		material11 FLOAT8 ,
+		material12 FLOAT8 ,
+		material13 FLOAT8 ,
+		material14 FLOAT8 ,
+		material15 FLOAT8 ,
+		material16 FLOAT8 ,
+		material17 FLOAT8 ,
+		material18 FLOAT8 ,
+		material19 FLOAT8 ,
+		material2 FLOAT8 ,
+		material20 FLOAT8 ,
+		material3 FLOAT8 ,
+		material4 FLOAT8 ,
+		material5 FLOAT8 ,
+		material6 FLOAT8 ,
+		material7 FLOAT8 ,
+		material8 FLOAT8 ,
+		material9 FLOAT8 ,
+		name VARCHAR(255) ,
+		probability1 FLOAT8 ,
+		probability10 FLOAT8 ,
+		probability11 FLOAT8 ,
+		probability12 FLOAT8 ,
+		probability13 FLOAT8 ,
+		probability14 FLOAT8 ,
+		probability15 FLOAT8 ,
+		probability16 FLOAT8 ,
+		probability17 FLOAT8 ,
+		probability18 FLOAT8 ,
+		probability19 FLOAT8 ,
+		probability2 FLOAT8 ,
+		probability20 FLOAT8 ,
+		probability3 FLOAT8 ,
+		probability4 FLOAT8 ,
+		probability5 FLOAT8 ,
+		probability6 FLOAT8 ,
+		probability7 FLOAT8 ,
+		probability8 FLOAT8 ,
+		probability9 FLOAT8 ,
+		token VARCHAR(64) 
+		,PRIMARY KEY(token)
+);
+
+drop table if exists boom_pile;
+create table boom_pile
+(
+		bench VARCHAR(255) ,
+		boom_date VARCHAR(255) ,
+		cost_to_go Integer ,
+		geom VARCHAR(255) ,
+		material1 FLOAT8 ,
+		material10 FLOAT8 ,
+		material11 FLOAT8 ,
+		material12 FLOAT8 ,
+		material13 FLOAT8 ,
+		material14 FLOAT8 ,
+		material15 FLOAT8 ,
+		material16 FLOAT8 ,
+		material17 FLOAT8 ,
+		material18 FLOAT8 ,
+		material19 FLOAT8 ,
+		material2 FLOAT8 ,
+		material20 FLOAT8 ,
+		material3 FLOAT8 ,
+		material4 FLOAT8 ,
+		material5 FLOAT8 ,
+		material6 FLOAT8 ,
+		material7 FLOAT8 ,
+		material8 FLOAT8 ,
+		material9 FLOAT8 ,
+		mine_type VARCHAR(255) ,
+		name VARCHAR(255)  NOT NULL ,
+		nt VARCHAR(255) ,
+		quantity FLOAT8 ,
+		status VARCHAR(255) ,
+		tag VARCHAR(255) ,
+		token VARCHAR(64) ,
+		used FLOAT8 
+		,PRIMARY KEY(token)
+);
+
+drop table if exists composition;
+create table composition
+(
+		name VARCHAR(255) ,
+		token VARCHAR(64) 
+		,PRIMARY KEY(token)
+);
+
+drop table if exists content_percent;
+create table content_percent
+(
+		composition_id VARCHAR(255) ,
+		max_value FLOAT8 ,
+		min_value FLOAT8 ,
+		mine_product_id VARCHAR(255) ,
+		name VARCHAR(255) ,
+		num Integer  NOT NULL ,
+		status Integer ,
+		token VARCHAR(64) 
+		,PRIMARY KEY(token)
+);
+
+drop table if exists digger;
+create table digger
+(
+		attribs VARCHAR(255) ,
+		name VARCHAR(255) ,
+		produce FLOAT8 ,
+		speed FLOAT8 ,
+		status Integer ,
+		token VARCHAR(64) ,
+		utc Integer ,
+		x FLOAT8 ,
+		y FLOAT8 
+		,PRIMARY KEY(token)
+);
+
+drop table if exists digger_product_binding;
+create table digger_product_binding
+(
+		digger_id VARCHAR(255) ,
+		mine_product_id VARCHAR(255) ,
+		name VARCHAR(255) ,
+		token VARCHAR(64) 
+		,PRIMARY KEY(token)
+);
+
+drop table if exists mine_change_status;
+create table mine_change_status
+(
+		changing TEXT ,
+		created_at TIMESTAMP ,
+		data_time_of_bridge TIMESTAMP ,
+		data_time_of_neutron TIMESTAMP ,
+		data_type Integer ,
+		date_flag VARCHAR(255) ,
+		name VARCHAR(255) ,
+		product_name VARCHAR(255) ,
+		token VARCHAR(64) ,
+		total_mass_of_bridge FLOAT8 ,
+		total_mass_of_neutron FLOAT8 
+		,PRIMARY KEY(token)
+);
+
+drop table if exists mine_product;
+create table mine_product
+(
+		content_limits VARCHAR(255) ,
+		mat_indexes VARCHAR(255) ,
+		name VARCHAR(255) ,
+		status VARCHAR(255) ,
+		token VARCHAR(64) 
+		,PRIMARY KEY(token)
+);
+
+drop table if exists product_and_boom_group;
+create table product_and_boom_group
+(
+		boom_group_id VARCHAR(255) ,
+		mine_product_id VARCHAR(255) ,
+		name VARCHAR(255) ,
+		token VARCHAR(64) 
+		,PRIMARY KEY(token)
+);
+
+drop table if exists set_of_boom_groups;
+create table set_of_boom_groups
+(
+		boom_group_ids VARCHAR(255) ,
+		created_at TIMESTAMP ,
+		date_flag VARCHAR(255) ,
+		diggers VARCHAR(255) ,
+		mat_contents VARCHAR(255) ,
+		mine_product_id VARCHAR(255) ,
+		name VARCHAR(255) ,
+		nt TEXT ,
+		status Integer ,
+		token VARCHAR(64) ,
+		update_at TIMESTAMP 
+		,PRIMARY KEY(token)
+);
+
+drop table if exists weigh_logger;
+create table weigh_logger
+(
+		busi_no VARCHAR(255)  NOT NULL ,
+		check_time VARCHAR(255)  NOT NULL ,
+		direction VARCHAR(255) ,
+		gross_weight FLOAT8 ,
+		net_weight FLOAT8 ,
+		nt Text ,
+		site_code VARCHAR(255) ,
+		site_name VARCHAR(255) ,
+		tare_weight FLOAT8 ,
+		token VARCHAR(64) ,
+		update_at TIMESTAMP ,
+		vehicle_no VARCHAR(255)  NOT NULL 
+		,PRIMARY KEY(token)
+);
+
+drop table if exists y_analyser;
+create table y_analyser
+(
+		analyser_num VARCHAR(255) ,
+		created_at TIMESTAMP ,
+		crushing_plant TEXT ,
+		flux FLOAT8 ,
+		load FLOAT8 ,
+		mat1 FLOAT8 ,
+		mat10 FLOAT8 ,
+		mat11 FLOAT8 ,
+		mat12 FLOAT8 ,
+		mat13 FLOAT8 ,
+		mat14 FLOAT8 ,
+		mat15 FLOAT8 ,
+		mat16 FLOAT8 ,
+		mat17 FLOAT8 ,
+		mat18 FLOAT8 ,
+		mat19 FLOAT8 ,
+		mat2 FLOAT8 ,
+		mat20 FLOAT8 ,
+		mat3 FLOAT8 ,
+		mat4 FLOAT8 ,
+		mat5 FLOAT8 ,
+		mat6 FLOAT8 ,
+		mat7 FLOAT8 ,
+		mat8 FLOAT8 ,
+		mat9 FLOAT8 ,
+		speed FLOAT8 ,
+		status BIGINT ,
+		test_at BIGINT ,
+		token VARCHAR(64) 
+		,PRIMARY KEY(token)
+);

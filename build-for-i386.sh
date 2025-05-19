@@ -1,0 +1,1 @@
+GOOS=windows GOARCH=386 go build -o main-i386.exe main.go

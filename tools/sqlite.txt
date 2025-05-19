@@ -1,0 +1,296 @@
+
+drop table if exists boom_group;
+create table boom_group
+(
+		distance FLOAT8  NOT NULL  -- 距离
+		,geom VARCHAR(255)  -- 空间数据
+		,high FLOAT8  NOT NULL  -- 最大产量
+		,low FLOAT8  NOT NULL  -- 最小产量
+		,material1 FLOAT8  -- 物质1
+		,material10 FLOAT8  -- 物质10
+		,material11 FLOAT8  -- 物质11
+		,material12 FLOAT8  -- 物质12
+		,material13 FLOAT8  -- 物质13
+		,material14 FLOAT8  -- 物质14
+		,material15 FLOAT8  -- 物质15
+		,material16 FLOAT8  -- 物质16
+		,material17 FLOAT8  -- 物质17
+		,material18 FLOAT8  -- 物质18
+		,material19 FLOAT8  -- 物质19
+		,material2 FLOAT8  -- 物质2
+		,material20 FLOAT8  -- 物质20
+		,material3 FLOAT8  -- 物质3
+		,material4 FLOAT8  -- 物质4
+		,material5 FLOAT8  -- 物质5
+		,material6 FLOAT8  -- 物质6
+		,material7 FLOAT8  -- 物质7
+		,material8 FLOAT8  -- 物质8
+		,material9 FLOAT8  -- 物质9
+		,name VARCHAR(255)  NOT NULL  UNIQUE  -- 名称
+		,nt VARCHAR(255)  -- 备注
+		,number VARCHAR(255)  NOT NULL  UNIQUE  -- 编号
+		,pile_id VARCHAR(255) 
+		,status VARCHAR(255)  -- 状态
+		,tag VARCHAR(255)  -- 标签
+		,token VARCHAR(64) Primary Key 
+		,used FLOAT8  -- 已用
+		,x FLOAT8  NOT NULL  -- X
+		,y FLOAT8  NOT NULL  -- Y
+);
+
+
+
+drop table if exists boom_group_info;
+create table boom_group_info
+(
+		boom_group_id VARCHAR(255) 
+		,created_at TIMESTAMP  -- 创建时间
+		,material1 FLOAT8  -- 含量1
+		,material10 FLOAT8  -- 含量10
+		,material11 FLOAT8  -- 含量11
+		,material12 FLOAT8  -- 含量12
+		,material13 FLOAT8  -- 含量13
+		,material14 FLOAT8  -- 含量14
+		,material15 FLOAT8  -- 含量15
+		,material16 FLOAT8  -- 含量16
+		,material17 FLOAT8  -- 含量17
+		,material18 FLOAT8  -- 含量18
+		,material19 FLOAT8  -- 含量19
+		,material2 FLOAT8  -- 含量2
+		,material20 FLOAT8  -- 含量20
+		,material3 FLOAT8  -- 含量3
+		,material4 FLOAT8  -- 含量4
+		,material5 FLOAT8  -- 含量5
+		,material6 FLOAT8  -- 含量6
+		,material7 FLOAT8  -- 含量7
+		,material8 FLOAT8  -- 含量8
+		,material9 FLOAT8  -- 含量9
+		,name VARCHAR(255)  -- 名字
+		,probability1 FLOAT8  -- 含量概率1
+		,probability10 FLOAT8  -- 含量概率10
+		,probability11 FLOAT8  -- 含量概率11
+		,probability12 FLOAT8  -- 含量概率12
+		,probability13 FLOAT8  -- 含量概率13
+		,probability14 FLOAT8  -- 含量概率14
+		,probability15 FLOAT8  -- 含量概率15
+		,probability16 FLOAT8  -- 含量概率16
+		,probability17 FLOAT8  -- 含量概率17
+		,probability18 FLOAT8  -- 含量概率18
+		,probability19 FLOAT8  -- 含量概率19
+		,probability2 FLOAT8  -- 含量概率2
+		,probability20 FLOAT8  -- 含量概率20
+		,probability3 FLOAT8  -- 含量概率3
+		,probability4 FLOAT8  -- 含量概率4
+		,probability5 FLOAT8  -- 含量概率5
+		,probability6 FLOAT8  -- 含量概率6
+		,probability7 FLOAT8  -- 含量概率7
+		,probability8 FLOAT8  -- 含量概率8
+		,probability9 FLOAT8  -- 含量概率9
+		,token VARCHAR(64) Primary Key 
+);
+
+
+
+drop table if exists boom_pile;
+create table boom_pile
+(
+		bench VARCHAR(255)  -- 平台
+		,boom_date VARCHAR(255)  -- 爆破日期
+		,cost_to_go Integer  -- 到达耗时
+		,geom VARCHAR(255)  -- 空间数据
+		,material1 FLOAT8  -- 物质1
+		,material10 FLOAT8  -- 物质10
+		,material11 FLOAT8  -- 物质11
+		,material12 FLOAT8  -- 物质12
+		,material13 FLOAT8  -- 物质13
+		,material14 FLOAT8  -- 物质14
+		,material15 FLOAT8  -- 物质15
+		,material16 FLOAT8  -- 物质16
+		,material17 FLOAT8  -- 物质17
+		,material18 FLOAT8  -- 物质18
+		,material19 FLOAT8  -- 物质19
+		,material2 FLOAT8  -- 物质2
+		,material20 FLOAT8  -- 物质20
+		,material3 FLOAT8  -- 物质3
+		,material4 FLOAT8  -- 物质4
+		,material5 FLOAT8  -- 物质5
+		,material6 FLOAT8  -- 物质6
+		,material7 FLOAT8  -- 物质7
+		,material8 FLOAT8  -- 物质8
+		,material9 FLOAT8  -- 物质9
+		,mine_type VARCHAR(255)  -- 矿石类型
+		,name VARCHAR(255)  NOT NULL  -- 名称
+		,nt VARCHAR(255)  -- 备注
+		,quantity FLOAT8  -- 总矿量
+		,status VARCHAR(255)  -- 状态
+		,tag VARCHAR(255)  -- 标签
+		,token VARCHAR(64) Primary Key 
+		,used FLOAT8  -- 已用
+);
+
+
+
+drop table if exists composition;
+create table composition
+(
+		name VARCHAR(255)  -- 名字
+		,token VARCHAR(64) Primary Key 
+);
+
+
+
+drop table if exists content_percent;
+create table content_percent
+(
+		composition_id VARCHAR(255) 
+		,max_value FLOAT8  -- 最大值
+		,min_value FLOAT8  -- 最小值
+		,mine_product_id VARCHAR(255) 
+		,name VARCHAR(255)  -- 名称
+		,num Integer  NOT NULL  -- 序号
+		,status Integer  -- 状态
+		,token VARCHAR(64) Primary Key 
+);
+
+
+
+drop table if exists digger;
+create table digger
+(
+		attribs VARCHAR(255)  -- 属性
+		,name VARCHAR(255)  -- 名称
+		,produce FLOAT8  -- 产量
+		,speed FLOAT8  -- 挖机强度
+		,status Integer  -- 状态
+		,token VARCHAR(64) Primary Key 
+		,utc Integer  -- 定位的时间
+		,x FLOAT8  -- 位置横坐标
+		,y FLOAT8  -- 位置纵坐标
+);
+
+
+
+drop table if exists digger_product_binding;
+create table digger_product_binding
+(
+		digger_id VARCHAR(255) 
+		,mine_product_id VARCHAR(255) 
+		,name VARCHAR(255)  -- 名称
+		,token VARCHAR(64) Primary Key 
+);
+
+
+
+drop table if exists mine_change_status;
+create table mine_change_status
+(
+		changing TEXT  -- 变化量
+		,created_at TIMESTAMP  -- 记录时间
+		,data_time_of_bridge TIMESTAMP  -- 地磅数据时间
+		,data_time_of_neutron TIMESTAMP  -- 中子仪数据时间
+		,data_type Integer  -- 重要性
+		,date_flag VARCHAR(255)  -- 日期标志
+		,name VARCHAR(255)  -- 名称
+		,product_name VARCHAR(255)  -- 产品
+		,token VARCHAR(64) Primary Key 
+		,total_mass_of_bridge FLOAT8  -- 地磅累积质量
+		,total_mass_of_neutron FLOAT8  -- 中子仪累积质量
+);
+
+
+
+drop table if exists mine_product;
+create table mine_product
+(
+		content_limits VARCHAR(255)  -- 配矿要求
+		,mat_indexes VARCHAR(255)  -- 索引项
+		,name VARCHAR(255)  -- 产品
+		,status VARCHAR(255)  -- 状态
+		,token VARCHAR(64) Primary Key 
+);
+
+
+
+drop table if exists product_and_boom_group;
+create table product_and_boom_group
+(
+		boom_group_id VARCHAR(255) 
+		,mine_product_id VARCHAR(255) 
+		,name VARCHAR(255)  -- 名字
+		,token VARCHAR(64) Primary Key 
+);
+
+
+
+drop table if exists set_of_boom_groups;
+create table set_of_boom_groups
+(
+		boom_group_ids VARCHAR(255)  -- 配矿单元列表
+		,created_at TIMESTAMP  -- 创建时间
+		,date_flag VARCHAR(255)  -- 日期
+		,diggers VARCHAR(255)  -- 挖机列表
+		,mat_contents VARCHAR(255)  -- 矿物品位列表
+		,mine_product_id VARCHAR(255) 
+		,name VARCHAR(255)  -- 名称
+		,nt TEXT  -- 备注
+		,status Integer  -- 状态
+		,token VARCHAR(64) Primary Key 
+		,update_at TIMESTAMP  -- 更新时间
+);
+
+
+
+drop table if exists weigh_logger;
+create table weigh_logger
+(
+		busi_no VARCHAR(255)  NOT NULL  -- 业务编号
+		,check_time VARCHAR(255)  NOT NULL  -- 称重时间
+		,direction VARCHAR(255)  -- 方向
+		,gross_weight FLOAT8  -- 毛重
+		,net_weight FLOAT8  -- 净重
+		,nt Text  -- 备注
+		,site_code VARCHAR(255)  -- 地磅编号
+		,site_name VARCHAR(255)  -- 地磅名称
+		,tare_weight FLOAT8  -- 皮重
+		,token VARCHAR(64) Primary Key 
+		,update_at TIMESTAMP  -- 更新时间
+		,vehicle_no VARCHAR(255)  NOT NULL  -- 车辆号码
+);
+
+
+
+drop table if exists y_analyser;
+create table y_analyser
+(
+		analyser_num VARCHAR(255)  -- 分析仪编号
+		,created_at TIMESTAMP  -- 创建时间
+		,crushing_plant TEXT  -- 设备
+		,flux FLOAT8  -- 通量
+		,load FLOAT8  -- 负载
+		,mat1 FLOAT8  -- SiO2含量
+		,mat10 FLOAT8  -- 物质10含量
+		,mat11 FLOAT8  -- 物质11含量
+		,mat12 FLOAT8  -- 物质12含量
+		,mat13 FLOAT8  -- 物质13含量
+		,mat14 FLOAT8  -- 物质14含量
+		,mat15 FLOAT8  -- 物质15含量
+		,mat16 FLOAT8  -- 物质16含量
+		,mat17 FLOAT8  -- 物质17含量
+		,mat18 FLOAT8  -- 物质18含量
+		,mat19 FLOAT8  -- 物质19含量
+		,mat2 FLOAT8  -- Al2O3含量
+		,mat20 FLOAT8  -- 物质20含量
+		,mat3 FLOAT8  -- Fe2O3含量
+		,mat4 FLOAT8  -- CaO含量
+		,mat5 FLOAT8  -- MgO含量
+		,mat6 FLOAT8  -- K2O含量
+		,mat7 FLOAT8  -- Na2O含量
+		,mat8 FLOAT8  -- SO3含量
+		,mat9 FLOAT8  -- 物质9含量
+		,speed FLOAT8  -- 速度
+		,status Integer  -- 状态
+		,test_at Integer  -- 测试时间
+		,token VARCHAR(64) Primary Key 
+);
+
+
